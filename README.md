@@ -1,3 +1,5 @@
+[![Ruby](https://github.com/serverkit/serverkit-mise/actions/workflows/main.yml/badge.svg)](https://github.com/serverkit/serverkit-mise/actions/workflows/main.yml)
+
 # Serverkit::Mise
 
 TODO: Delete this and the text below, and describe your gem
