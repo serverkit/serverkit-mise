@@ -26,7 +26,7 @@ module Serverkit
       end
 
       # @return [String]
-      # @example "git-plus@4.4.11"
+      # @example "ruby@3.4.3"
       def name_with_version
         if version
           "#{name}@#{version}"
@@ -35,6 +35,7 @@ module Serverkit
         end
       end
 
+      # @return [String]
       def version_or_latest
         version || "latest"
       end
