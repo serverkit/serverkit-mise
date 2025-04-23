@@ -46,6 +46,26 @@ resources:
     version: 3.4.3
 ```
 
+### mise_use
+
+Install specified tool and add the version to `mise.yml`.
+
+#### Attributes
+
+- `name` - tool name (required)
+- `version` - tool version (optional)
+
+#### Example
+
+```yaml
+resources:
+  - type: mise_use
+    name: go
+    version: '1.23'
+  - type: mise_use
+    name: ruby
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/serverkit-mise.
