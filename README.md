@@ -1,25 +1,23 @@
-[![Ruby](https://github.com/serverkit/serverkit-mise/actions/workflows/main.yml/badge.svg)](https://github.com/serverkit/serverkit-mise/actions/workflows/main.yml)
+[![Test](https://github.com/serverkit/serverkit-mise/actions/workflows/test.yml/badge.svg)](https://github.com/serverkit/serverkit-mise/actions/workflows/test.yml)
 
-# Serverkit::Mise
+# serverkit-mise
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/serverkit/mise`. To experiment with that code, run `bin/console` for an interactive prompt.
+[Serverkit](https://github.com/serverkit/serverkit) plug-in for [mise](https://github.com/jdx/mise).
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+TODO: Replace `serverkit-mise` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
 Install the gem and add to the application's Gemfile by executing:
 
 ```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+bundle add serverkit-mise
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+gem install serverkit-mise
 ```
 
 ## Usage
@@ -48,9 +46,29 @@ resources:
     version: 3.4.3
 ```
 
+### mise_use
+
+Install specified tool and add the version to `mise.yml`.
+
+#### Attributes
+
+- `name` - tool name (required)
+- `version` - tool version (optional)
+
+#### Example
+
+```yaml
+resources:
+  - type: mise_use
+    name: go
+    version: '1.23'
+  - type: mise_use
+    name: ruby
+```
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/serverkit-mise.
+Bug reports and pull requests are welcome on GitHub at [serverkit/serverkit-mise](https://github.com/serverkit/serverkit-mise).
 
 ## License
 
