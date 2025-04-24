@@ -1,4 +1,5 @@
 [![Test](https://github.com/serverkit/serverkit-mise/actions/workflows/test.yml/badge.svg)](https://github.com/serverkit/serverkit-mise/actions/workflows/test.yml)
+[![Gem Version](https://badge.fury.io/rb/serverkit-mise.svg)](https://badge.fury.io/rb/serverkit-mise)
 
 # serverkit-mise
 
