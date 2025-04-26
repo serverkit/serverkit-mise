@@ -7,18 +7,17 @@ module Serverkit
     class MiseUse < Base
       attribute :name, required: true, type: String
       attribute :version, type: String
-      # FIXME: add global option
-      attribute :global, type: [TrueClass, FalseClass] # , default: true
+      attribute :global, type: [TrueClass, FalseClass], default: true
 
       # @note Override
       def apply
-        run_command("mise use --global #{name_with_version}")
+        run_command("mise use #{global_option} #{name_with_version}")
       end
 
       # @note Override
       def check
         cmd = if global
-          "mise ls --global  #{name} | grep '#{version_or_latest}'"
+          "mise ls --cd $HOME #{name} | grep '#{version_or_latest}'"
         else
           "mise ls --current #{name} | grep '#{version_or_latest}'"
         end
@@ -42,13 +41,14 @@ module Serverkit
         end
       end
 
+      # @return [String]
       def version_or_latest
         version || "latest"
       end
 
-      # def global_option
-      #   "--global" if global
-      # end
+      def global_option
+        "--global" if global
+      end
     end
   end
 end
