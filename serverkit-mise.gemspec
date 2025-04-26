@@ -31,5 +31,5 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "serverkit"
+  spec.add_dependency "serverkit", ">= 1.0.0"
 end
