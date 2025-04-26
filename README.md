@@ -7,16 +7,9 @@
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
-
-```bash
-bundle add serverkit-mise
-```
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-```bash
-gem install serverkit-mise
+```rb
+# Gemfile
+gem "serverkit-mise"
 ```
 
 ## Usage
@@ -52,7 +45,8 @@ Install specified tool and add the version to `mise.yml`.
 #### Attributes
 
 - `name` - tool name (required)
-- `version` - tool version (optional)
+- `version` - tool version (optional, if not specified, the latest version will be installed)
+- `global` - global option (optional, default: `true`)
 
 #### Example
 
@@ -61,6 +55,7 @@ resources:
   - type: mise_use
     name: go
     version: '1.23'
+    global: false
   - type: mise_use
     name: ruby
 ```
