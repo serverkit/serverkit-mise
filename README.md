@@ -14,7 +14,33 @@ gem "serverkit-mise"
 
 ## Usage
 
-TODO: Write usage instructions here
+### Prerequisites
+
+- Ensure you have [serverkit](https://github.com/serverkit/serverkit) gem installed
+- Ensure you have [mise](https://github.com/jdx/mise) installed on your system
+
+### Basic Example
+
+Create a recipe file that uses the mise resources:
+
+```yaml
+# recipe.yml
+resources:
+  # Install Node.js using mise
+  - type: mise_install
+    name: node
+    version: 20.10.0
+  # Install Ruby and set it as global
+  - type: mise_use
+    name: ruby
+    version: 3.3.0
+```
+
+Then apply your recipe with Serverkit:
+
+```console
+$ serverkit apply recipe.yml
+```
 
 ## Resource
 
