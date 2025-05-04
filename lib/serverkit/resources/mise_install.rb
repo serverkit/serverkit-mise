@@ -15,7 +15,7 @@ module Serverkit
 
       # @note Override
       def check
-        check_command(" mise ls #{name} | grep '#{version_or_latest}'")
+        check_command("mise ls #{name} | grep '\\s#{version_or_latest}'")
       end
 
       private
