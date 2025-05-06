@@ -15,7 +15,12 @@ module Serverkit
 
       # @note Override
       def check
-        check_command("mise ls #{name} | grep '\\s#{version_or_latest}'")
+        cmd = if version
+          "mise ls #{name} | grep '\\s#{version}'"
+        else
+          "mise ls #{name} | grep \"$(mise latest #{name})\""
+        end
+        check_command(cmd)
       end
 
       private
@@ -33,11 +38,6 @@ module Serverkit
         else
           name
         end
-      end
-
-      # @return [String]
-      def version_or_latest
-        version || "latest"
       end
     end
   end
